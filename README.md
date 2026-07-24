@@ -1,36 +1,40 @@
 # mapid-python
 
-Python teaching module for geospatial analysis with [MAPID](https://mapid.io) custom polygon data. Session 1 focuses on **validation, correction, and before/after map comparison** using Shapely and GeoPandas.
+Python teaching module for geospatial analysis with [MAPID](https://mapid.io) custom polygon data.
 
 ## Sessions
 
-| Session | Topic | Status |
-|---------|-------|--------|
-| 1 | Python for Spatial — validate & correct polygons | Available |
-| 2 | Automation (pipeline + n8n) | Coming soon |
+| Session | Topic | Format | Status |
+|---------|-------|--------|--------|
+| 1 | Python for Spatial — validate & correct polygons | **Jupyter notebook** | Available |
+| 2 | Automation (pipeline + n8n) | Native Python | Coming soon |
 
 ## What Session 1 teaches
 
-- Fetch polygon data from MAPID API (or cached sample)
+- Load local polygon sample data (no API key required)
 - Detect invalid geometries with Shapely (`is_valid`, `explain_validity`)
 - Auto-fix fixable cases with `buffer(0)` only
 - Flag overlap cases for manual review
 - Compare **before vs after** with tables and maps
-- Compute area, analyze, and visualize on a map
+- Visualize on **matplotlib** and **Folium** interactive maps
+- Compute area, analyze, and choropleth
 
 ## Repository layout
 
 ```
 mapid-python/
-├── mapid_client.py          # Shared MAPID GeoServer API client
+├── mapid_client.py              # MAPID API client (Session 2 / optional reference)
+├── scripts/
+│   └── generate_mapid_polygons.py   # Generate session-1 sample data
 ├── requirements.txt
-├── .env.example
+├── .env.example                 # Only needed for Session 2 live API
 ├── session-1/
-│   ├── playground_mapid.py  # Main script (# %% cells for Shift+Enter)
+│   ├── playground_mapid.ipynb   # Session 1 — primary teaching notebook
+│   ├── playground_mapid.py    # Optional instructor CLI reference
 │   ├── data/
-│   │   └── mapid-polygons.json   # 25 teaching polygons (valid + invalid + overlap)
-│   └── output/              # Generated maps and reports
-└── session-2/               # Automation (planned)
+│   │   └── mapid-polygons.json
+│   └── output/                # Generated maps and reports
+└── session-2/                   # Automation (planned)
 ```
 
 ## Setup
@@ -41,80 +45,71 @@ cd mapid-python
 
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r requirements.txt notebook
 ```
 
 Verify install:
 
 ```bash
-python -c "import geopandas, requests, matplotlib; print('OK')"
+python -c "import geopandas, folium, matplotlib; print('OK')"
 ```
 
-### MAPID credentials (optional — for live API)
+## Run Session 1 (Jupyter)
+
+No MAPID credentials needed — the notebook uses local sample data.
 
 ```bash
-cp .env.example .env
-# Edit .env with your MAPID_API_KEY, MAPID_PROJECT_ID, MAPID_LAYER_ID
-export $(grep -v '^#' .env | xargs)
+cd session-1
+jupyter notebook playground_mapid.ipynb
 ```
 
-## Run Session 1
+Or open `session-1/playground_mapid.ipynb` in Cursor/VS Code and select the `.venv` Python kernel. Run cells top-to-bottom with **Shift+Enter**.
 
-### Full pipeline (CLI)
+### Optional CLI reference
+
+[`session-1/playground_mapid.py`](session-1/playground_mapid.py) is kept as an instructor reference with CLI support:
 
 ```bash
-# Cached sample — no API key required
 python session-1/playground_mapid.py --cached
-
-# Live MAPID API
-python session-1/playground_mapid.py --live
 ```
 
-### Step-by-step in Cursor / VS Code
+## Notebook outputs
 
-1. Open `session-1/playground_mapid.py`
-2. Select interpreter: `.venv/bin/python`
-3. Place cursor in a `# %%` cell
-4. Press **Shift+Enter** to run that cell in the Interactive Window
-
-### CLI options
-
-| Flag | Description |
-|------|-------------|
-| `--cached` | Use `session-1/data/mapid-polygons.json` (default) |
-| `--live` | Fetch from MAPID GeoServer API |
-| `--output-dir PATH` | Output folder (default: `session-1/output/`) |
-| `--area-threshold N` | Filter threshold in hectares (default: `5`) |
-| `--extend-folium` | Save interactive HTML map |
-
-## Outputs
-
-After a run, check `session-1/output/`:
+After running all cells, check `session-1/output/`:
 
 | File | Description |
 |------|-------------|
 | `comparison_report.csv` | Per-polygon before/after validity |
-| `before_after_map.png` | Side-by-side correction map |
+| `before_after_map.png` | Side-by-side matplotlib correction map |
 | `fixed_polygons_detail.png` | Zoom on each corrected polygon |
-| `choropleth_area_ha.png` | Final map colored by area (hectares) |
-| `map_interactive.html` | Optional Folium map (`--extend-folium`) |
+| `choropleth_area_ha.png` | Area choropleth (matplotlib) |
+| `map_final.html` | Folium map — corrected polygons on basemap |
+| `map_before_after.html` | Folium map — layer control (before/after/overlap) |
 
 ## Sample data
 
-`session-1/data/mapid-polygons.json` contains **25 polygons**:
+`session-1/data/mapid-polygons.json` — default **50 polygons** (regenerate anytime):
 
-| Group | Count | Shapely behavior |
-|-------|-------|------------------|
-| Valid | 8 | `is_valid = True` |
-| Self-intersection / sliver | 10 | Invalid → fixable with `buffer(0)` |
-| Overlap review | 7 | Valid geometry → human review |
+```bash
+python scripts/generate_mapid_polygons.py              # 50 polygons (default)
+python scripts/generate_mapid_polygons.py --count 25   # original teaching size
+python scripts/generate_mapid_polygons.py --count 50 --seed 42
+```
+
+| Group | Count (@ 50) | Shapely behavior |
+|-------|----------------|------------------|
+| Valid | 16 | `is_valid = True` |
+| Self-intersection / sliver | 20 | Invalid → fixable with `buffer(0)` |
+| Overlap review | 14 | Valid geometry → human review |
+
+Teaching mix scales proportionally from the original 25-polygon design (8 / 10 / 7).
 
 ## Dependencies
 
 - GeoPandas, Shapely, PyProj — spatial processing
-- Requests — MAPID API
 - Matplotlib — static maps
-- Folium — optional interactive map
-- Pandas, PyYAML
+- Folium — interactive web maps
+- Pandas
+- Requests, PyYAML — Session 2 / optional API use
 
 ## SOLI DEO GLORIA
