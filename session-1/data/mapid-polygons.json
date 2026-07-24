@@ -1,0 +1,1157 @@
+{
+  "type": "FeatureCollection",
+  "total": 25,
+  "features": [
+    {
+      "type": "Feature",
+      "id": "poly-001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.756,
+              -6.324
+            ],
+            [
+              106.76400000000001,
+              -6.324
+            ],
+            [
+              106.76400000000001,
+              -6.316000000000001
+            ],
+            [
+              106.756,
+              -6.316000000000001
+            ],
+            [
+              106.756,
+              -6.324
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-001",
+        "name": "Zone 01",
+        "category": "commercial",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-002",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.786,
+              -6.324
+            ],
+            [
+              106.79400000000001,
+              -6.324
+            ],
+            [
+              106.79400000000001,
+              -6.316000000000001
+            ],
+            [
+              106.786,
+              -6.316000000000001
+            ],
+            [
+              106.786,
+              -6.324
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-002",
+        "name": "Zone 02",
+        "category": "commercial",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-003",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.81599999999999,
+              -6.324
+            ],
+            [
+              106.824,
+              -6.324
+            ],
+            [
+              106.824,
+              -6.316000000000001
+            ],
+            [
+              106.81599999999999,
+              -6.316000000000001
+            ],
+            [
+              106.81599999999999,
+              -6.324
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-003",
+        "name": "Zone 03",
+        "category": "industrial",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-004",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.84599999999999,
+              -6.324
+            ],
+            [
+              106.854,
+              -6.324
+            ],
+            [
+              106.854,
+              -6.316000000000001
+            ],
+            [
+              106.84599999999999,
+              -6.316000000000001
+            ],
+            [
+              106.84599999999999,
+              -6.324
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-004",
+        "name": "Zone 04",
+        "category": "residential",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-005",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.756,
+              -6.284
+            ],
+            [
+              106.76400000000001,
+              -6.284
+            ],
+            [
+              106.76400000000001,
+              -6.276000000000001
+            ],
+            [
+              106.756,
+              -6.276000000000001
+            ],
+            [
+              106.756,
+              -6.284
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-005",
+        "name": "Zone 05",
+        "category": "residential",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-006",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.786,
+              -6.284
+            ],
+            [
+              106.79400000000001,
+              -6.284
+            ],
+            [
+              106.79400000000001,
+              -6.276000000000001
+            ],
+            [
+              106.786,
+              -6.276000000000001
+            ],
+            [
+              106.786,
+              -6.284
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-006",
+        "name": "Zone 06",
+        "category": "residential",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-007",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.81599999999999,
+              -6.284
+            ],
+            [
+              106.824,
+              -6.284
+            ],
+            [
+              106.824,
+              -6.276000000000001
+            ],
+            [
+              106.81599999999999,
+              -6.276000000000001
+            ],
+            [
+              106.81599999999999,
+              -6.284
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-007",
+        "name": "Zone 07",
+        "category": "commercial",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-008",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.84599999999999,
+              -6.284
+            ],
+            [
+              106.854,
+              -6.284
+            ],
+            [
+              106.854,
+              -6.276000000000001
+            ],
+            [
+              106.84599999999999,
+              -6.276000000000001
+            ],
+            [
+              106.84599999999999,
+              -6.284
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-008",
+        "name": "Zone 08",
+        "category": "green",
+        "qa_flag": "none",
+        "fixable": false,
+        "fix_method": "none",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Valid geometry \u2014 no correction needed"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-009",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.765,
+              -6.245
+            ],
+            [
+              106.77499999999999,
+              -6.235
+            ],
+            [
+              106.77499999999999,
+              -6.245
+            ],
+            [
+              106.765,
+              -6.235
+            ],
+            [
+              106.765,
+              -6.245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-009",
+        "name": "Zone 09",
+        "category": "commercial",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "severe",
+        "expected_mapid_upload": false,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Severe bowtie \u2014 MAPID likely rejects; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-010",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.795,
+              -6.245
+            ],
+            [
+              106.80499999999999,
+              -6.235
+            ],
+            [
+              106.80499999999999,
+              -6.245
+            ],
+            [
+              106.795,
+              -6.235
+            ],
+            [
+              106.795,
+              -6.245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-010",
+        "name": "Zone 10",
+        "category": "green",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "severe",
+        "expected_mapid_upload": false,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Severe bowtie \u2014 MAPID likely rejects; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-011",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.825,
+              -6.245
+            ],
+            [
+              106.835,
+              -6.235
+            ],
+            [
+              106.835,
+              -6.245
+            ],
+            [
+              106.825,
+              -6.235
+            ],
+            [
+              106.825,
+              -6.245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-011",
+        "name": "Zone 11",
+        "category": "mixed",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "severe",
+        "expected_mapid_upload": false,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Severe bowtie \u2014 MAPID likely rejects; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-012",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.855,
+              -6.245
+            ],
+            [
+              106.86,
+              -6.235
+            ],
+            [
+              106.865,
+              -6.245
+            ],
+            [
+              106.855,
+              -6.24
+            ],
+            [
+              106.865,
+              -6.235
+            ],
+            [
+              106.855,
+              -6.245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-012",
+        "name": "Zone 12",
+        "category": "commercial",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "severe",
+        "expected_mapid_upload": false,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Severe kink \u2014 MAPID likely rejects; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-013",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.885,
+              -6.245
+            ],
+            [
+              106.89,
+              -6.235
+            ],
+            [
+              106.895,
+              -6.245
+            ],
+            [
+              106.885,
+              -6.24
+            ],
+            [
+              106.895,
+              -6.235
+            ],
+            [
+              106.885,
+              -6.245
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-013",
+        "name": "Zone 13",
+        "category": "commercial",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "severe",
+        "expected_mapid_upload": false,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Severe kink \u2014 MAPID likely rejects; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-014",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.916,
+              -6.244
+            ],
+            [
+              106.924,
+              -6.244
+            ],
+            [
+              106.924,
+              -6.236000000000001
+            ],
+            [
+              106.916,
+              -6.236000000000001
+            ],
+            [
+              106.92,
+              -6.228000000000001
+            ],
+            [
+              106.916,
+              -6.236000000000001
+            ],
+            [
+              106.916,
+              -6.244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-014",
+        "name": "Zone 14",
+        "category": "commercial",
+        "qa_flag": "sliver",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "severe",
+        "expected_mapid_upload": false,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Severe spike \u2014 MAPID likely rejects; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-015",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.76599999999999,
+              -6.204
+            ],
+            [
+              106.774,
+              -6.204
+            ],
+            [
+              106.774,
+              -6.196000000000001
+            ],
+            [
+              106.774,
+              -6.196000000000001
+            ],
+            [
+              106.76599999999999,
+              -6.196000000000001
+            ],
+            [
+              106.76599999999999,
+              -6.204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-015",
+        "name": "Zone 15",
+        "category": "residential",
+        "qa_flag": "sliver",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "mild",
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Mild duplicate vertex \u2014 MAPID may accept; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-016",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.79599999999999,
+              -6.204
+            ],
+            [
+              106.804,
+              -6.204
+            ],
+            [
+              106.804,
+              -6.196000000000001
+            ],
+            [
+              106.804,
+              -6.196000000000001
+            ],
+            [
+              106.79599999999999,
+              -6.196000000000001
+            ],
+            [
+              106.79599999999999,
+              -6.204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-016",
+        "name": "Zone 16",
+        "category": "residential",
+        "qa_flag": "sliver",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "mild",
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Mild duplicate vertex \u2014 MAPID may accept; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-017",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.828,
+              -6.202
+            ],
+            [
+              106.832,
+              -6.198
+            ],
+            [
+              106.832,
+              -6.202
+            ],
+            [
+              106.828,
+              -6.198
+            ],
+            [
+              106.828,
+              -6.202
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-017",
+        "name": "Zone 17",
+        "category": "green",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "mild",
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Mild small bowtie \u2014 borderline upload; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-018",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.858,
+              -6.202
+            ],
+            [
+              106.862,
+              -6.198
+            ],
+            [
+              106.862,
+              -6.202
+            ],
+            [
+              106.858,
+              -6.198
+            ],
+            [
+              106.858,
+              -6.202
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-018",
+        "name": "Zone 18",
+        "category": "green",
+        "qa_flag": "self_intersection",
+        "fixable": true,
+        "fix_method": "buffer_0",
+        "invalid_severity": "mild",
+        "expected_mapid_upload": true,
+        "overlap_with": null,
+        "overlap_pct": null,
+        "instructor_note": "Mild small bowtie \u2014 borderline upload; fix with buffer(0)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-019",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.89500000000001,
+              -6.305
+            ],
+            [
+              106.905,
+              -6.305
+            ],
+            [
+              106.905,
+              -6.295
+            ],
+            [
+              106.89500000000001,
+              -6.295
+            ],
+            [
+              106.89500000000001,
+              -6.305
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-019",
+        "name": "Zone 19",
+        "category": "commercial",
+        "qa_flag": "minor_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-020"
+        ],
+        "overlap_pct": 12.0,
+        "instructor_note": "Minor overlap \u2014 valid geometry, needs human decision"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-020",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.9038,
+              -6.305
+            ],
+            [
+              106.9138,
+              -6.305
+            ],
+            [
+              106.9138,
+              -6.295
+            ],
+            [
+              106.9038,
+              -6.295
+            ],
+            [
+              106.9038,
+              -6.305
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-020",
+        "name": "Zone 20",
+        "category": "commercial",
+        "qa_flag": "minor_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-019"
+        ],
+        "overlap_pct": 12.0,
+        "instructor_note": "Minor overlap \u2014 valid geometry, needs human decision"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-021",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.89500000000001,
+              -6.265
+            ],
+            [
+              106.905,
+              -6.265
+            ],
+            [
+              106.905,
+              -6.255
+            ],
+            [
+              106.89500000000001,
+              -6.255
+            ],
+            [
+              106.89500000000001,
+              -6.265
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-021",
+        "name": "Zone 21",
+        "category": "residential",
+        "qa_flag": "minor_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-022"
+        ],
+        "overlap_pct": 22.0,
+        "instructor_note": "Minor overlap \u2014 valid geometry, needs human decision"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-022",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.90280000000001,
+              -6.265
+            ],
+            [
+              106.9128,
+              -6.265
+            ],
+            [
+              106.9128,
+              -6.255
+            ],
+            [
+              106.90280000000001,
+              -6.255
+            ],
+            [
+              106.90280000000001,
+              -6.265
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-022",
+        "name": "Zone 22",
+        "category": "residential",
+        "qa_flag": "minor_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-021"
+        ],
+        "overlap_pct": 22.0,
+        "instructor_note": "Minor overlap \u2014 valid geometry, needs human decision"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-023",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.932,
+              -6.228
+            ],
+            [
+              106.948,
+              -6.228
+            ],
+            [
+              106.948,
+              -6.212
+            ],
+            [
+              106.932,
+              -6.212
+            ],
+            [
+              106.932,
+              -6.228
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-023",
+        "name": "Zone 23",
+        "category": "industrial",
+        "qa_flag": "major_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-024",
+          "poly-025"
+        ],
+        "overlap_pct": 50.0,
+        "instructor_note": "Major overlap \u2014 likely digitizing error, manual review required"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-024",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.934,
+              -6.226
+            ],
+            [
+              106.946,
+              -6.226
+            ],
+            [
+              106.946,
+              -6.2139999999999995
+            ],
+            [
+              106.934,
+              -6.2139999999999995
+            ],
+            [
+              106.934,
+              -6.226
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-024",
+        "name": "Zone 24",
+        "category": "mixed",
+        "qa_flag": "major_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-023",
+          "poly-025"
+        ],
+        "overlap_pct": 50.0,
+        "instructor_note": "Major overlap \u2014 likely digitizing error, manual review required"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poly-025",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.93599999999999,
+              -6.223999999999999
+            ],
+            [
+              106.944,
+              -6.223999999999999
+            ],
+            [
+              106.944,
+              -6.216
+            ],
+            [
+              106.93599999999999,
+              -6.216
+            ],
+            [
+              106.93599999999999,
+              -6.223999999999999
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "poly-025",
+        "name": "Zone 25",
+        "category": "green",
+        "qa_flag": "major_overlap",
+        "fixable": false,
+        "fix_method": "manual_review",
+        "invalid_severity": null,
+        "expected_mapid_upload": true,
+        "overlap_with": [
+          "poly-023",
+          "poly-024"
+        ],
+        "overlap_pct": 50.0,
+        "instructor_note": "Major overlap \u2014 likely digitizing error, manual review required"
+      }
+    }
+  ],
+  "metadata": {
+    "description": "Session 1 teaching sample: 8 valid + 10 fixable + 7 overlap",
+    "valid_count": 8,
+    "qa_issue_count": 17,
+    "fixable_count": 10,
+    "severe_invalid_count": 6,
+    "mild_invalid_count": 4,
+    "overlap_review_count": 7,
+    "expected_mapid_upload_raw": 19
+  }
+}
