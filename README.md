@@ -116,3 +116,5 @@ After a run, check `session-1/output/`:
 - Matplotlib — static maps
 - Folium — optional interactive map
 - Pandas, PyYAML
+
+## SOLI DEO GLORIA
