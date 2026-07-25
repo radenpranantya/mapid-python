@@ -4,10 +4,10 @@ Python teaching module for geospatial analysis with [MAPID](https://mapid.io) cu
 
 ## Sessions
 
-| Session | Topic | Format | Status |
-|---------|-------|--------|--------|
-| 1 | Python for Spatial — validate & correct polygons | **Jupyter notebook** | Available |
-| 2 | Automation (pipeline + n8n) | Native Python | Coming soon |
+| Session | Topic                                            | Format               | Status      |
+| ------- | ------------------------------------------------ | -------------------- | ----------- |
+| 1       | Python for Spatial — validate & correct polygons | **Jupyter notebook** | Available   |
+| 2       | Automation (pipeline + n8n)                      | Native Python        | Coming soon |
 
 ## What Session 1 teaches
 
@@ -77,14 +77,14 @@ python session-1/playground_mapid.py --cached
 
 After running all cells, check `session-1/output/`:
 
-| File | Description |
-|------|-------------|
-| `comparison_report.csv` | Per-polygon before/after validity |
-| `before_after_map.png` | Side-by-side matplotlib correction map |
-| `fixed_polygons_detail.png` | Zoom on each corrected polygon |
-| `choropleth_area_ha.png` | Area choropleth (matplotlib) |
-| `map_final.html` | Folium map — corrected polygons on basemap |
-| `map_before_after.html` | Folium map — layer control (before/after/overlap) |
+| File                        | Description                                       |
+| --------------------------- | ------------------------------------------------- |
+| `comparison_report.csv`     | Per-polygon before/after validity                 |
+| `before_after_map.png`      | Side-by-side matplotlib correction map            |
+| `fixed_polygons_detail.png` | Zoom on each corrected polygon                    |
+| `choropleth_area_ha.png`    | Area choropleth (matplotlib)                      |
+| `map_final.html`            | Folium map — corrected polygons on basemap        |
+| `map_before_after.html`     | Folium map — layer control (before/after/overlap) |
 
 ## Sample data
 
@@ -96,11 +96,11 @@ python scripts/generate_mapid_polygons.py --count 25   # original teaching size
 python scripts/generate_mapid_polygons.py --count 50 --seed 42
 ```
 
-| Group | Count (@ 50) | Shapely behavior |
-|-------|----------------|------------------|
-| Valid | 16 | `is_valid = True` |
-| Self-intersection / sliver | 20 | Invalid → fixable with `buffer(0)` |
-| Overlap review | 14 | Valid geometry → human review |
+| Group                      | Count (@ 50) | Shapely behavior                   |
+| -------------------------- | ------------ | ---------------------------------- |
+| Valid                      | 16           | `is_valid = True`                  |
+| Self-intersection / sliver | 20           | Invalid → fixable with `buffer(0)` |
+| Overlap review             | 14           | Valid geometry → human review      |
 
 Teaching mix scales proportionally from the original 25-polygon design (8 / 10 / 7).
 
