@@ -18,7 +18,6 @@ LAT_MIN, LAT_MAX = -6.35, -6.05
 
 
 def next_output_path(data_dir: Path = DEFAULT_DATA_DIR) -> Path:
-    """Return generate_batch_polygons_N.json with N = max existing + 1."""
     data_dir.mkdir(parents=True, exist_ok=True)
     next_n = 1
     for path in data_dir.glob(f"{OUTPUT_PREFIX}_*.json"):
