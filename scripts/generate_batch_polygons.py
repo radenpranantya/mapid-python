@@ -8,12 +8,24 @@ import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_JSON = ROOT / "session-2" / "data" / "sample_batch.json"
+DEFAULT_DATA_DIR = ROOT / "session-2" / "data"
+OUTPUT_PREFIX = "generate_batch_polygons"
 # DEFAULT_GEOJSON = ROOT / "session-2" / "data" / "upload_batch.geojson"
 
 CATEGORIES = ["commercial", "residential", "industrial", "mixed", "green"]
 LON_MIN, LON_MAX = 106.75, 107.05
 LAT_MIN, LAT_MAX = -6.35, -6.05
+
+
+def next_output_path(data_dir: Path = DEFAULT_DATA_DIR) -> Path:
+    """Return generate_batch_polygons_N.json with N = max existing + 1."""
+    data_dir.mkdir(parents=True, exist_ok=True)
+    next_n = 1
+    for path in data_dir.glob(f"{OUTPUT_PREFIX}_*.json"):
+        suffix = path.stem.removeprefix(f"{OUTPUT_PREFIX}_")
+        if suffix.isdigit():
+            next_n = max(next_n, int(suffix) + 1)
+    return data_dir / f"{OUTPUT_PREFIX}_{next_n}.json"
 
 
 def _square_ring(lon: float, lat: float, half: float) -> list:
@@ -142,18 +154,24 @@ def main() -> None:
     parser.add_argument("--count", type=int, default=150, help="Total polygons (default: 150)")
     parser.add_argument("--invalid", type=int, default=5, help="Invalid/fixable count (default: 5)")
     parser.add_argument("--seed", type=int, default=123, help="Random seed")
-    parser.add_argument("--json-output", type=Path, default=DEFAULT_JSON)
+    parser.add_argument(
+        "--json-output",
+        type=Path,
+        default=None,
+        help="Output path (default: session-2/data/generate_batch_polygons_N.json, auto-increment)",
+    )
     # parser.add_argument("--geojson-output", type=Path, default=DEFAULT_GEOJSON)
     args = parser.parse_args()
 
+    json_output = args.json_output or next_output_path()
     batch = build_batch_collection(args.count, args.invalid, args.seed)
-    write_json(args.json_output, batch)
+    write_json(json_output, batch)
 
-    try:
-        upload = build_upload_geojson(batch)
-        write_json(args.geojson_output, upload)
-    except ImportError:
-        print("Skipped upload_batch.geojson (install shapely)")
+    # try:
+    #     upload = build_upload_geojson(batch)
+    #     write_json(args.geojson_output, upload)
+    # except ImportError:
+    #     print("Skipped upload_batch.geojson (install shapely)")
 
     meta = batch["metadata"]
     print(f"  Valid: {meta['valid_count']}  Invalid (fixable): {meta['invalid_count']}")
