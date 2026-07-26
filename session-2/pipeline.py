@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Session 2 — polygon QA pipeline (inbox → validate → fix → report)."""
-
 from __future__ import annotations
 
 import argparse
