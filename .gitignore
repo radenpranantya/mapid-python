@@ -3,4 +3,11 @@
 .venv/
 __pycache__/
 .matplotlib/
+session-2/config.yaml
+session-2/inbox/*.geojson
+session-2/inbox/*.json
+session-2/processed/*
+!session-2/processed/README.md
+session-2/output/*
+!session-2/output/.gitkeep
 output/

@@ -7,7 +7,7 @@ Python teaching module for geospatial analysis with [MAPID](https://mapid.io) cu
 | Session | Topic                                            | Format               | Status      |
 | ------- | ------------------------------------------------ | -------------------- | ----------- |
 | 1       | Python for Spatial — validate & correct polygons | **Jupyter notebook** | Available   |
-| 2       | Automation (pipeline + n8n)                      | Native Python        | Coming soon |
+| 2       | Automation (pipeline + n8n)                      | Native Python        | Available   |
 
 ## What Session 1 teaches
 
@@ -19,22 +19,41 @@ Python teaching module for geospatial analysis with [MAPID](https://mapid.io) cu
 - Visualize on **matplotlib** and **Folium** interactive maps
 - Compute area, analyze, and choropleth
 
+## What Session 2 teaches
+
+- Generate 100–200 polygons for batch processing
+- **Drop JSON into inbox** — file-based data input
+- **Validate** polygons, **auto-fix** with `buffer(0)`, flag remaining issues
+- Export **QA report** (`report.txt`, `report.json`, `summary.csv`)
+- Orchestrate with **n8n** (schedule → pipeline → email report)
+
 ## Repository layout
 
 ```
 mapid-python/
-├── mapid_client.py              # MAPID API client (Session 2 / optional reference)
+├── mapid_client.py              # Optional MAPID API client (Session 1 notebook)
 ├── scripts/
-│   └── generate_mapid_polygons.py   # Generate session-1 sample data
+│   ├── generate_mapid_polygons.py   # Session 1 sample data
+│   └── generate_batch_polygons.py   # Session 2 batch + upload GeoJSON
 ├── requirements.txt
-├── .env.example                 # Only needed for Session 2 live API
+├── .env.example                 # MAPID credentials for Session 2 live API
 ├── session-1/
 │   ├── playground_mapid.ipynb   # Session 1 — primary teaching notebook
-│   ├── playground_mapid.py    # Optional instructor CLI reference
-│   ├── data/
-│   │   └── mapid-polygons.json
-│   └── output/                # Generated maps and reports
-└── session-2/                   # Automation (planned)
+│   ├── playground_mapid.py      # Optional instructor CLI reference
+│   ├── data/mapid-polygons.json
+│   └── output/
+└── session-2/
+    ├── pipeline.py              # Inbox → validate → fix → report
+    ├── pipeline_template.py     # Mentee starter template
+    ├── config.example.yaml
+    ├── inbox/                   # Drop GeoJSON here for processing
+    ├── processed/               # Archived inbox files after run
+    ├── data/
+    │   └── generate_batch_polygons_*.json  # Auto-increment batch files
+    ├── output/                  # summary.csv, report.txt, GPKG, run.log
+    └── n8n/
+        ├── mapid_polygon_pipeline.json
+        └── README.md
 ```
 
 ## Setup
@@ -103,6 +122,54 @@ python scripts/generate_mapid_polygons.py --count 50 --seed 42
 | Overlap review             | 14           | Valid geometry → human review      |
 
 Teaching mix scales proportionally from the original 25-polygon design (8 / 10 / 7).
+
+## Run Session 2 (Inbox pipeline + n8n)
+
+### Step 1 — Generate batch data
+
+```bash
+python scripts/generate_batch_polygons.py              # 150 polygons (default)
+python scripts/generate_batch_polygons.py --count 200
+```
+
+Outputs:
+- `session-2/data/generate_batch_polygons_N.json` — batch with valid + invalid polygons
+
+### Step 2 — Drop file in inbox and run pipeline
+
+```bash
+cp "$(ls -t session-2/data/generate_batch_polygons_*.json | head -1)" session-2/inbox/
+cd session-2
+cp config.example.yaml config.yaml   # input.mode: inbox (default)
+python pipeline.py --config config.yaml
+```
+
+Expected outputs in `session-2/output/`:
+
+| File | Description |
+|------|-------------|
+| `summary.csv` | Per-polygon validity, fix status, area, centroids |
+| `report.json` | Run statistics (invalid, fixed, still invalid) |
+| `report.txt` | Human-readable report for email |
+| `polygons_processed.gpkg` | Processed geometries |
+| `run.log` | Pipeline audit log |
+
+Inbox file moves to `session-2/processed/` after success.
+
+**Cached mode:** set `input.mode: cached` and `cached_file: data/generate_batch_polygons_*.json` (uses latest batch).
+
+**Full test checklist:** [`session-2/TEST_GUIDE.md`](session-2/TEST_GUIDE.md)
+
+### Step 3 — n8n automation (schedule + email)
+
+See [`session-2/n8n/README.md`](session-2/n8n/README.md):
+
+1. Import `session-2/n8n/mapid_polygon_pipeline.json` into n8n
+2. Configure Set Variables (`pipeline_dir`, `python_bin`, `report_email`)
+3. Configure SMTP on **Send Email Report**
+4. Drop GeoJSON in `inbox/` → **Test workflow** or activate daily 08:00 schedule
+
+**Pattern:** n8n schedules and delivers; Python validates, fixes, and reports.
 
 ## Dependencies
 
