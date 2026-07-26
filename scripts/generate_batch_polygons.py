@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DATA_DIR = ROOT / "session-2" / "data"
-OUTPUT_PREFIX = "generate_batch_polygons"
+OUTPUT_PREFIX = "home_task_polygons"
 # DEFAULT_GEOJSON = ROOT / "session-2" / "data" / "upload_batch.geojson"
 
 CATEGORIES = ["commercial", "residential", "industrial", "mixed", "green"]
@@ -110,7 +110,6 @@ def build_batch_collection(count: int, invalid_count: int, seed: int) -> dict:
 
 
 def build_upload_geojson(batch: dict) -> dict:
-    """Valid-only geometries for manual MAPID UI upload (buffer(0) on fixable in pipeline)."""
     from shapely.geometry import mapping, shape
 
     upload_features = []
@@ -157,7 +156,7 @@ def main() -> None:
         "--json-output",
         type=Path,
         default=None,
-        help="Output path (default: session-2/data/generate_batch_polygons_N.json, auto-increment)",
+        help="Output path (default: session-2/data/home_task_polygons_N.json, auto-increment)",
     )
     # parser.add_argument("--geojson-output", type=Path, default=DEFAULT_GEOJSON)
     args = parser.parse_args()
