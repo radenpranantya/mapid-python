@@ -1,0 +1,13 @@
+# Session 2 — polygon QA pipeline
+# input.mode: inbox (default) | cached
+
+input:
+  mode: inbox
+  inbox_dir: ./inbox
+  processed_dir: ./processed
+  move_after_process: true
+  cached_file: data/generate_batch_polygons_*.json
+
+output:
+  dir: ./output
+  target_crs: EPSG:32748
